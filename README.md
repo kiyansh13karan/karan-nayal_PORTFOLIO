@@ -506,13 +506,10 @@ style={{
 ```
 </details>
 
-<br>
 
 ## <a name="links">🔗 Assets</a>
 
 Assets used in the project can be found [here](https://drive.google.com/file/d/1ZmtiMilUYTp1wkiXWMFX6AUk-msE981-/view?usp=sharing)
-
-<br>
 
 ## 🔗 Connect With Me
 
@@ -526,11 +523,11 @@ Feel free to reach out and connect with me on various platforms:
 
 📧 **Email:** [karannayalkannu1982@gmail.com](mailto:karannayalkannu1982@gmail.com)
 
-<br>
+
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
-<br>
+
 
 ## 🙏 Acknowledgments
 * ChatGPT (OpenAI) – development guidance & documentation help  
@@ -541,7 +538,7 @@ This project is open source and available under the [MIT License](LICENSE).
 * Special thanks to the open-source community
 
 
-<br>
+
 
 <div align="center">
   <p>Made with ❤️ by Karan Nayal</p>
