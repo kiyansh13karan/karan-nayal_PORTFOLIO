@@ -243,7 +243,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-* Original design inspiration from [Adrian Hajdin's Portfolio](https://github.com/adrianhajdin/portfolio)
+
 * Built with modern web technologies and best practices
 * Special thanks to the open-source community
 
