@@ -524,11 +524,7 @@ Feel free to reach out and connect with me on various platforms:
 📧 **Email:** [karannayalkannu1982@gmail.com](mailto:karannayalkannu1982@gmail.com)
 
 
-## <a name="more">🚀 More</a>
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
+<div align="center">
+  <p>Made with ❤️ by Karan Nayal</p>
+  <p>⭐ Star this repo if you find it helpful!</p>
+</div>
