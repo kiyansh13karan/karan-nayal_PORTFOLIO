@@ -35,12 +35,14 @@ Built with Next.js for handling the user interface, Three.js for rendering 3D el
 
 <a href="https://discord.gg/VnfU7CUU" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+## ⚙️ Tech Stack
 
-- Next.js
-- Three.js
-- Framer Motion
-- Tailwind CSS
+* **Next.js** - React framework for production
+* **Three.js** - 3D graphics library
+* **Framer Motion** - Animation library for React
+* **Tailwind CSS** - Utility-first CSS framework
+* **TypeScript** - Type-safe JavaScript
+* **React** - JavaScript library for building user interfaces
 
 ## <a name="features">🔋 Features</a>
 
