@@ -1,9 +1,10 @@
 <div align="center">
-  <br />
-    <a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank">
-      <img src="[https://github.com/adrianhajdin/portfolio/assets/151519281/c6ca3c03-6cb7-4f67-a9b9-a73da5bfa0d8](https://github.com/kiyansh13karan/karan-nayal_PORTFOLIO/blob/af68c9cac20322c22928872a733a96bda3b58e96/portfolio_banner.png)" alt="Project Banner">
+ <br />
+    <a href="https://github.com/kiyansh13karan/karan-nayal_PORTFOLIO/blob/main/portfolio_banner.png?raw=true" target="_blank">
+      <img src="https://github.com/kiyansh13karan/karan-nayal_PORTFOLIO/blob/main/portfolio_banner.png?raw=true" alt="Project Banner">
     </a>
   <br />
+
 
   <div>
     <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
