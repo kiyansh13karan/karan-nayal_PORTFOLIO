@@ -528,11 +528,12 @@ Feel free to reach out and connect with me on various platforms:
 
 This project is open source and available under the [MIT License](LICENSE).
 
----
 
 ## 🙏 Acknowledgments
-
-* Original design inspiration from [Adrian Hajdin's Portfolio](https://github.com/adrianhajdin/portfolio)
+* ChatGPT (OpenAI) – development guidance & documentation help  
+* Blackbox AI – coding assistance and debugging  
+* Google Gemini – portfolio banner design inspiration  
+* Canva – banner editing and refinement  
 * Built with modern web technologies and best practices
 * Special thanks to the open-source community
 
