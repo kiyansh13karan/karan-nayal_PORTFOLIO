@@ -8,17 +8,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Karan's Portfolio",
-  icons: {
-    icon: "/favicon.png",
-  },
-  description: "Modern & Minimal JS Mastery Portfolio",
+  description: "Modern & Minimalist JS Mastery Portfolio",
 };
+
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

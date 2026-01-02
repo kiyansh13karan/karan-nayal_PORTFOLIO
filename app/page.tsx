@@ -14,6 +14,9 @@ import Resume from "@/components/Resume";
 import Certificates from "@/components/Certificates";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
+
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
