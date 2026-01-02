@@ -1,58 +1,54 @@
 import React from "react";
-import { FaPython, FaReact, FaNodeJs, FaGitAlt, FaDatabase } from "react-icons/fa6";
-import { SiCplusplus, SiJavascript, SiMongodb, SiMysql, SiTensorflow, SiOpencv, SiPandas, SiNumpy, SiVisualstudiocode, SiPycharm, SiIntellijidea, SiCanva } from "react-icons/si";
-import { DiHtml5, DiCss3 } from "react-icons/di";
-import { TbBrandNextjs } from "react-icons/tb";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: <FaPython />, color: "text-yellow-400" },
-        { name: "C", icon: <SiCplusplus />, color: "text-blue-400" },
-        { name: "C++", icon: <SiCplusplus />, color: "text-blue-500" },
-        { name: "SQL", icon: <FaDatabase />, color: "text-orange-400" },
-        { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-300" },
+        { name: "Python", percentage: 90 },
+        { name: "C", percentage: 75 },
+        { name: "C++", percentage: 80 },
+        { name: "SQL", percentage: 85 },
+        { name: "JavaScript", percentage: 88 },
       ]
     },
     {
       title: "Web Development",
       skills: [
-        { name: "HTML", icon: <DiHtml5 />, color: "text-orange-500" },
-        { name: "CSS", icon: <DiCss3 />, color: "text-blue-400" },
-        { name: "React.js", icon: <FaReact />, color: "text-cyan-400" },
-        { name: "Next.js", icon: <TbBrandNextjs />, color: "text-white" },
-        { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
-        { name: "Express.js", icon: <FaNodeJs />, color: "text-green-400" },
+        { name: "HTML", percentage: 92 },
+        { name: "CSS", percentage: 90 },
+        { name: "React.js", percentage: 88 },
+        { name: "Next.js", percentage: 85 },
+        { name: "MongoDB", percentage: 78 },
+        { name: "Express.js", percentage: 82 },
       ]
     },
     {
       title: "Databases",
       skills: [
-        { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
-        { name: "MySQL", icon: <SiMysql />, color: "text-blue-600" },
+        { name: "MongoDB", percentage: 78 },
+        { name: "MySQL", percentage: 80 },
       ]
     },
     {
       title: "Machine Learning & CV",
       skills: [
-        { name: "TensorFlow", icon: <SiTensorflow />, color: "text-orange-500" },
-        { name: "Scikit-learn", icon: <FaPython />, color: "text-orange-400" },
-        { name: "OpenCV", icon: <SiOpencv />, color: "text-green-400" },
-        { name: "Pandas", icon: <SiPandas />, color: "text-blue-300" },
-        { name: "NumPy", icon: <SiNumpy />, color: "text-blue-400" },
+        { name: "TensorFlow", percentage: 75 },
+        { name: "Scikit-learn", percentage: 80 },
+        { name: "OpenCV", percentage: 70 },
+        { name: "Pandas", percentage: 85 },
+        { name: "NumPy", percentage: 88 },
       ]
     },
     {
       title: "Tools & Platforms",
       skills: [
-        { name: "VS Code", icon: <SiVisualstudiocode />, color: "text-blue-500" },
-        { name: "PyCharm", icon: <SiPycharm />, color: "text-green-400" },
-        { name: "IntelliJ IDEA", icon: <SiIntellijidea />, color: "text-red-400" },
-        { name: "Git", icon: <FaGitAlt />, color: "text-orange-500" },
-        { name: "Canva", icon: <SiCanva />, color: "text-purple-400" },
-        { name: "Microsoft Office", icon: <FaDatabase />, color: "text-blue-600" },
+        { name: "VS Code", percentage: 95 },
+        { name: "PyCharm", percentage: 85 },
+        { name: "IntelliJ IDEA", percentage: 80 },
+        { name: "Git", percentage: 88 },
+        { name: "Canva", percentage: 75 },
+        { name: "Microsoft Office", percentage: 90 },
       ]
     }
   ];
@@ -66,7 +62,7 @@ const Skills = () => {
         Technologies and tools I work with
       </p>
 
-      <div className="w-full mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10 max-w-7xl mx-auto px-4">
+      <div className="w-full mt-12 grid lg:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto px-4">
         {skillCategories.map((category, categoryIndex) => (
           <div
             key={categoryIndex}
@@ -79,18 +75,28 @@ const Skills = () => {
                 {category.title}
               </h3>
               
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="flex flex-col items-center p-4 rounded-xl bg-black-100 border border-black-300 hover:scale-110 hover:shadow-lg hover:shadow-purple/20 transition-all duration-300 group/skill cursor-pointer"
-                  >
-                    <div className={`text-3xl lg:text-4xl mb-3 ${skill.color} group-hover/skill:scale-110 transition-transform duration-300`}>
-                      {skill.icon}
+                  <div key={skillIndex} className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-white-200 text-sm lg:text-base font-medium">
+                        {skill.name}
+                      </span>
+                      <span className="text-purple text-sm lg:text-base font-semibold">
+                        {skill.percentage}%
+                      </span>
                     </div>
-                    <span className="text-white-200 text-sm lg:text-base text-center font-medium">
-                      {skill.name}
-                    </span>
+                    <div className="w-full bg-black-100 rounded-full h-3 overflow-hidden relative">
+                      <div 
+                        className="h-full bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-400 rounded-full transition-all duration-1000 ease-out animate-pulse shadow-lg shadow-purple/30"
+                        style={{ 
+                          width: `${skill.percentage}%`,
+                          background: `linear-gradient(90deg, #ec4899 0%, #8b5cf6 25%, #3b82f6 50%, #06b6d4 75%, #10b981 100%)`,
+                          boxShadow: '0 0 20px rgba(139, 92, 246, 0.5)'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer" />
+                    </div>
                   </div>
                 ))}
               </div>

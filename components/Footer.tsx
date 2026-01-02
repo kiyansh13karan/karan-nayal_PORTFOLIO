@@ -9,56 +9,56 @@ const Footer = () => {
       name: "WhatsApp",
       icon: <FaWhatsapp />,
       link: "https://wa.me/917830242564",
-      color: "hover:text-green-400"
+      color: "text-green-500 hover:text-green-400"
     },
     {
       id: 2,
       name: "Telegram",
       icon: <FaTelegram />,
       link: "https://t.me/krn_nayal",
-      color: "hover:text-blue-400"
+      color: "text-blue-500 hover:text-blue-400"
     },
     {
       id: 3,
       name: "Instagram",
       icon: <FaInstagram />,
       link: "https://www.instagram.com/krn_nayal13",
-      color: "hover:text-pink-400"
+      color: "text-pink-500 hover:text-pink-400"
     },
     {
       id: 4,
       name: "Snapchat",
       icon: <FaSnapchat />,
       link: "https://www.snapchat.com/add/gemini_01",
-      color: "hover:text-yellow-400"
+      color: "text-yellow-400 hover:text-yellow-300"
     },
     {
       id: 5,
       name: "LinkedIn",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/karan-nayal-054981286/",
-      color: "hover:text-blue-500"
+      color: "text-blue-600 hover:text-blue-500"
     },
     {
       id: 6,
       name: "GitHub",
       icon: <FaGithub />,
       link: "https://github.com/kiyansh13karan",
-      color: "hover:text-gray-300"
+      color: "text-white hover:text-gray-300"
     },
     {
       id: 7,
       name: "Email",
       icon: <FaEnvelope />,
       link: "mailto:karannayalkannu1982@gmail.com",
-      color: "hover:text-red-400"
+      color: "text-red-500 hover:text-red-400"
     },
     {
       id: 8,
       name: "Twitter",
       icon: <FaTwitter />,
       link: "https://x.com/somnathtigers13",
-      color: "hover:text-blue-400"
+      color: "text-sky-500 hover:text-sky-400"
     }
   ];
 
@@ -108,9 +108,9 @@ const Footer = () => {
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative w-16 h-16 md:w-20 md:h-20 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-2xl border border-black-300 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple/20 ${social.color}`}
+                className={`group relative w-14 h-14 md:w-16 md:h-16 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-2xl border border-black-300 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple/20 ${social.color}`}
               >
-                <div className="text-2xl md:text-3xl text-white-200 group-hover:scale-110 transition-all duration-300">
+                <div className="text-xl md:text-2xl transition-all duration-300">
                   {social.icon}
                 </div>
                 

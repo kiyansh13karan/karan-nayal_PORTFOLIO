@@ -124,4 +124,13 @@
     transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
     text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(139, 92, 246, 0.3);
   }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
 }
