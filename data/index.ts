@@ -1,6 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Resume", link: "#resume" },
+  { name: "Certificates", link: "#certificates" },
   { name: "Projects", link: "#projects" },
   { name: "Skills", link: "#skills" },
   { name: "Testimonials", link: "#testimonials" },
@@ -75,7 +76,7 @@ export const projects = [
     id: 1,
     title: "Huffman File Compressor",
     des: "A modern and responsive web application for lossless file compression using Huffman's algorithm. Built with an animated frontend and a Python Flask backend.",
-    img: "/p1.svg",
+    img: "/file-com.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://github.com/kiyansh13karan/Huffman_breeze_compressor",
   },
@@ -85,7 +86,7 @@ export const projects = [
     des: "A machine learning project that trains a neural network on the MNIST dataset to recognize handwritten digits and predict external 28x28 pixel images.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/karannayalkannu1982",
+    link: "https://github.com/kiyansh13karan/Handwritten_digit_recognition",
   },
   {
     id: 3,
@@ -93,15 +94,15 @@ export const projects = [
     des: "A glassmorphism-based BMI calculator with real-time calculation, input validation, and health category classification.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/karannayalkannu1982",
+    link: "https://github.com/kiyansh13karan/BMI-Calculator",
   },
   {
     id: 4,
     title: "Portfolio Website",
     des: "A modern Next.js portfolio featuring 3D elements, animations, and responsive design showcasing my projects and skills.",
-    img: "/p4.svg",
+    img: "/portfolio.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/karannayalkannu1982",
+    link: "https://github.com/kiyansh13karan/karan-nayal_PORTFOLIO",
   },
 ];
 

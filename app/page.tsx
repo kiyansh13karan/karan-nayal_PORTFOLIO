@@ -11,6 +11,7 @@ import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import Resume from "@/components/Resume";
+import Certificates from "@/components/Certificates";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <Hero />
         <Resume />
         <Grid />
+        <Certificates />
         <RecentProjects />
         <Skills />
         <Clients />
