@@ -11,7 +11,7 @@ const Resume = () => {
       color: "hover:text-gray-300"
     },
     {
-      name: "LinkedIn", 
+      name: "LinkedIn",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/karan-nayal-054981286/",
       color: "hover:text-blue-500"
@@ -19,15 +19,15 @@ const Resume = () => {
     {
       name: "Email",
       icon: <FaEnvelope />,
-      link: "mailto:karannayalkannu1982@gmail.com", 
+      link: "mailto:karannayalkannu1982@gmail.com",
       color: "hover:text-red-400"
     }
   ];
 
   const highlights = [
     "B.Tech CSE – Graphic Era Hill University, Bhimtal (CGPA: 7.5)",
-    "300+ DSA problems solved (LeetCode & GeeksforGeeks)",
-    "Projects in Web Development & Machine Learning"
+    "Campus Mantri at GeeksforGeeks (Jan 2026 – Jun 2026)",
+    "300+ DSA problems solved (LeetCode & GeeksforGeeks)"
   ];
 
   return (
@@ -42,7 +42,7 @@ const Resume = () => {
           <p className="text-white-200 text-center mb-8 text-lg">
             A quick overview of my background and experience
           </p>
-          
+
           <p className="text-white-200 text-center max-w-3xl mb-12 text-base leading-relaxed">
             Computer Science Engineering student with strong foundations in Web Development, Machine Learning, and problem solving. Passionate about building modern, responsive applications and solving real-world problems through technology.
           </p>
@@ -81,8 +81,8 @@ const Resume = () => {
           </div>
 
           {/* Download Resume Button */}
-          <a 
-            href="/Karan_Nayal_CV.pdf" 
+          <a
+            href="/Karan_Nayal_CV.pdf"
             download="Karan_Nayal_CV.pdf"
             className="inline-block"
           >

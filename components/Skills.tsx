@@ -19,8 +19,8 @@ const Skills = () => {
         { name: "CSS", percentage: 90 },
         { name: "React.js", percentage: 88 },
         { name: "Next.js", percentage: 85 },
-        { name: "MongoDB", percentage: 78 },
         { name: "Express.js", percentage: 82 },
+        { name: "MongoDB", percentage: 78 },
       ]
     },
     {
@@ -35,18 +35,18 @@ const Skills = () => {
       skills: [
         { name: "TensorFlow", percentage: 75 },
         { name: "Scikit-learn", percentage: 80 },
-        { name: "OpenCV", percentage: 70 },
+        { name: "OpenCV", percentage: 72 },
         { name: "Pandas", percentage: 85 },
         { name: "NumPy", percentage: 88 },
       ]
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Technologies",
       skills: [
+        { name: "Git", percentage: 88 },
         { name: "VS Code", percentage: 95 },
         { name: "PyCharm", percentage: 85 },
-        { name: "IntelliJ IDEA", percentage: 80 },
-        { name: "Git", percentage: 88 },
+        { name: "IntelliJ", percentage: 80 },
         { name: "Canva", percentage: 75 },
         { name: "Microsoft Office", percentage: 90 },
       ]
@@ -69,12 +69,12 @@ const Skills = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex flex-col p-3 lg:p-5 justify-between items-center relative backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-3xl border border-black-300 group hover:scale-105 transition-all duration-300"
           >
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            
+
             <div className="relative z-10 w-full">
               <h3 className="text-xl lg:text-2xl font-bold text-center text-white mb-8">
                 {category.title}
               </h3>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="space-y-2">
@@ -87,9 +87,9 @@ const Skills = () => {
                       </span>
                     </div>
                     <div className="w-full bg-black-100 rounded-full h-3 overflow-hidden relative">
-                      <div 
+                      <div
                         className="h-full bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 to-cyan-400 rounded-full transition-all duration-1000 ease-out animate-pulse shadow-lg shadow-purple/30"
-                        style={{ 
+                        style={{
                           width: `${skill.percentage}%`,
                           background: `linear-gradient(90deg, #ec4899 0%, #8b5cf6 25%, #3b82f6 50%, #06b6d4 75%, #10b981 100%)`,
                           boxShadow: '0 0 20px rgba(139, 92, 246, 0.5)'

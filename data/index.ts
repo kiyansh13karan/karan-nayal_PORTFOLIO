@@ -104,6 +104,24 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/kiyansh13karan/karan-nayal_PORTFOLIO",
   },
+  {
+    id: 5,
+    title: "Student Print Hub",
+    des: "A web-based platform that allows students to upload documents and request printouts online, making the printing process efficient and queue-free.",
+    img: "/p1.svg",
+    iconLists: ["/re.svg", "/ts.svg", "/c.svg", "/stream.svg", "/fm.svg"],
+    link: "https://github.com/kiyansh13karan/Student-Print-Hub-",
+    techStack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB"],
+  },
+  {
+    id: 6,
+    title: "YOLOv8 Tracker",
+    des: "A real-time object detection and tracking system using YOLOv8 and DeepSORT. Detects and tracks multiple objects in video streams with unique ID assignment.",
+    img: "/p4.svg",
+    iconLists: ["/c.svg", "/tail.svg", "/stream.svg", "/next.svg"],
+    link: "https://github.com/kiyansh13karan/yolov8-tracker",
+    techStack: ["Python", "OpenCV", "YOLOv8", "DeepSORT", "NumPy", "PyTorch"],
+  },
 ];
 
 export const testimonials = [
@@ -160,31 +178,48 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Computer Science Engineering Student",
-    desc: "Currently pursuing B.Tech in CSE at Graphic Era Hill University, Bhimtal (2023-2027) with CGPA 7.5. Focus on web development and machine learning.",
+    title: "Campus Mantri – GeeksforGeeks",
+    desc: "Official campus representative at Graphic Era Hill University, Bhimtal. Promoted GfG resources, organized technical events, and boosted student engagement.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Web Development Projects",
-    desc: "Built responsive web applications using React.js, Next.js, and modern frontend technologies with focus on user experience and performance.",
+    title: "Full-Stack Web Developer",
+    desc: "Built responsive full-stack web applications using React.js, Next.js, Node.js and MongoDB with focus on user experience and performance.",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Machine Learning Enthusiast",
-    desc: "Developed ML projects including handwritten digit recognition using TensorFlow and neural networks on MNIST dataset.",
+    title: "Machine Learning Engineer",
+    desc: "Developed ML & Computer Vision projects including handwritten digit recognition (97% accuracy), YOLOv8 object tracking, and data analytics pipelines.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Problem Solver & Coder",
-    desc: "Solved 300+ problems on LeetCode and GeeksforGeeks. Strong foundation in DSA, algorithms, and competitive programming.",
+    title: "Problem Solver & Competitive Coder",
+    desc: "Solved 300+ DSA problems on LeetCode and GeeksforGeeks. Finalist at IIIT Delhi Research Tank Hackathon. Participated in 5+ hackathons.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+  },
+];
+
+export const internships = [
+  {
+    id: 1,
+    company: "GeeksforGeeks",
+    role: "Campus Mantri (Official Representative)",
+    duration: "January 2026 – June 2026",
+    type: "6 Months",
+    responsibilities: [
+      "Served as the official GeeksforGeeks representative at Graphic Era Hill University, Bhimtal.",
+      "Acted as the primary point of contact between GeeksforGeeks and the student community.",
+      "Organized and promoted campus-level technical events and initiatives.",
+      "Increased student engagement with GeeksforGeeks educational resources and platforms.",
+      "Demonstrated leadership, communication, and event coordination skills.",
+    ],
   },
 ];
 
