@@ -94,7 +94,7 @@ const Footer = () => {
         {/* Connect Section */}
         <div className="mt-20 mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Let's <span className="text-purple">Connect</span>
+            Let&apos;s <span className="text-purple">Connect</span>
           </h2>
           <p className="text-white-200 text-lg mb-12">
             Feel free to connect with me on any platform below
