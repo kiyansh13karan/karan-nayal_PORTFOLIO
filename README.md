@@ -15,7 +15,7 @@
 
   <h3 align="center">A Modern Next.js Portfolio</h3>
 
-**Live Demo:** [_Coming Soon_ (Will be updated after deployment)](https://karan-nayal-portfolio-gn7k-git-main-karan-nayals-projects.vercel.app/)
+**Live Demo:** [Karan Nayal)](https://karan-nayal-portfolio-gn7k-git-main-karan-nayals-projects.vercel.app/)
    
 </div>
 
