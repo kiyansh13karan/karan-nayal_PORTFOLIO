@@ -4,7 +4,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import dynamic from "next/dynamic";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
-import SafeSpline from "./SafeSpline";
+const Spline = dynamic(() => import("./SplineWrapper"), { ssr: false });
 
 import {
   FaGithub,
@@ -120,7 +120,7 @@ export const BentoGridItem = ({
         {/* Spline Robot (Absolute full box behind text) */}
         <div className="absolute inset-0 z-0 pointer-events-auto opacity-40 mix-blend-lighten">
           <div className="absolute inset-0 scale-[1.3] md:scale-[1.4] translate-y-[15%] lg:translate-x-[10%]">
-            <SafeSpline />
+            <Spline scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
           </div>
         </div>
 
