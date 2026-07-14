@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 // Also install this npm i --save-dev @types/react-lottie
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
-const Spline = dynamic(() => import("@splinetool/react-spline"), { ssr: false });
+const Spline = dynamic(() => import("./SplineWrapper"), { ssr: false });
 
 import {
   FaGithub,
