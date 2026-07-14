@@ -3,6 +3,7 @@
 import { navItems } from "@/data";
 
 import Hero from "@/components/Hero";
+import StatsSection from "@/components/StatsSection";
 import Grid from "@/components/Grid";
 import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
@@ -15,16 +16,17 @@ import Certificates from "@/components/Certificates";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 // Force dynamic rendering
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
+      <div className="w-full max-w-[85vw]">
         <FloatingNav navItems={navItems} />
         <Hero />
         <Resume />
         <Grid />
+        <StatsSection />
         <Certificates />
         <RecentProjects />
         <Skills />

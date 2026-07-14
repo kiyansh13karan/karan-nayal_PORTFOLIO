@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { User, FileText, Award, FolderOpen, Code, MessageSquare, Mail } from "lucide-react";
 
 export const FloatingNav = ({
   navItems,
@@ -16,22 +17,18 @@ export const FloatingNav = ({
   navItems: {
     name: string;
     link: string;
-    icon?: JSX.Element;
   }[];
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
-  // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
         setVisible(true);
       } else {
         if (direction < 0) {
@@ -42,6 +39,19 @@ export const FloatingNav = ({
       }
     }
   });
+
+  const getIcon = (name: string) => {
+    switch (name) {
+      case "About": return <User className="w-[18px] h-[18px]" />;
+      case "Resume": return <FileText className="w-[18px] h-[18px]" />;
+      case "Certificates": return <Award className="w-[18px] h-[18px]" />;
+      case "Projects": return <FolderOpen className="w-[18px] h-[18px]" />;
+      case "Skills": return <Code className="w-[18px] h-[18px]" />;
+      case "Testimonials": return <MessageSquare className="w-[18px] h-[18px]" />;
+      case "Contact": return <Mail className="w-[18px] h-[18px]" />;
+      default: return <User className="w-[18px] h-[18px]" />;
+    }
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -58,38 +68,45 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          // change rounded-full to rounded-lg
-          // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
-          // change  pr-2 pl-8 py-2 to px-10 py-5
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+          "flex fixed z-[5000] top-10 inset-x-0 mx-auto px-6 py-3 rounded-2xl border border-white/10 bg-black/20 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] items-center justify-center space-x-2 w-max",
           className
         )}
-        style={{
-          backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
-          borderRadius: "12px",
-          border: "1px solid rgba(255, 255, 255, 0.125)",
-        }}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
-          </Link>
-        ))}
-        {/* remove this login btn */}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> */}
+        {/* Logo */}
+        <Link href="/" className="mr-4 pl-2 pr-4 flex items-center">
+          <img src="/my_logo_1-1.png" alt="logo" className="h-8 w-auto object-contain invert brightness-0 dark:invert-0" style={{ filter: "brightness(0) invert(1)" }} />
+        </Link>
+        
+        <div className="flex items-center space-x-2">
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="relative flex items-center px-4 py-2 rounded-xl text-neutral-300 hover:text-white transition-colors"
+            >
+              <AnimatePresence>
+                {hoveredIndex === idx && (
+                  <motion.span
+                    className="absolute inset-0 rounded-xl bg-white/10 shadow-[0_0_15px_rgba(255,255,255,0.25)] border border-white/40"
+                    layoutId="hoverBackground"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, transition: { duration: 0.15 } }}
+                    exit={{ opacity: 0, transition: { duration: 0.15, delay: 0.2 } }}
+                  />
+                )}
+              </AnimatePresence>
+              
+              <div className="relative z-10 flex items-center space-x-2">
+                {getIcon(navItem.name)}
+                <span className="text-sm font-semibold">
+                  {navItem.name}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </motion.div>
     </AnimatePresence>
   );

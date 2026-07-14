@@ -14,7 +14,6 @@ const nextConfig = {
   },
   // Disable static generation to avoid document errors
   trailingSlash: true,
-  generateStaticParams: false,
 };
 
 export default nextConfig;

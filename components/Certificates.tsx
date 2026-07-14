@@ -23,18 +23,18 @@ const Certificates = () => {
     },
     {
       id: 3,
-      title: "Frontend Software Engineering Job Simulation",
-      organization: "Forage",
-      year: "2024",
+      title: "Data Structures and Algorithms",
+      organization: "GeeksForGeeks",
+      year: "2026",
       icon: <FaCode />,
       gradient: "from-pink-500/20 to-orange-500/20",
       iconColor: "text-pink-400",
     },
     {
       id: 4,
-      title: "Generative AI",
-      organization: "LinkedIn Learning",
-      year: "2024",
+      title: "SQL Mastery for Data Science",
+      organization: "GeeksforGeeks",
+      year: "2026",
       icon: <FaRobot />,
       gradient: "from-cyan-500/20 to-blue-500/20",
       iconColor: "text-cyan-400",
@@ -50,22 +50,13 @@ const Certificates = () => {
     },
     {
       id: 6,
-      title: "Introduction to Artificial Intelligence",
-      organization: "Simplilearn",
-      year: "2025",
-      icon: <FaGraduationCap />,
-      gradient: "from-green-500/20 to-cyan-500/20",
-      iconColor: "text-green-400",
-    },
-    {
-      id: 7,
-      title: "Campus Mantri",
+      title: "Power BI - Data Visualization",
       organization: "GeeksforGeeks",
       year: "2026",
-      icon: <FaUsers />,
-      gradient: "from-emerald-500/20 to-green-500/20",
-      iconColor: "text-emerald-400",
-    },
+      icon: <FaChartBar />,
+      gradient: "from-green-500/20 to-cyan-500/20",
+      iconColor: "text-green-400",
+    }
   ];
 
   return (

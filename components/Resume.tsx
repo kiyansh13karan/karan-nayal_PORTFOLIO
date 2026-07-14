@@ -1,6 +1,8 @@
 import React from "react";
 import { FaDownload, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
+import { Button } from "./ui/MovingBorders";
+import { HoverBorderGradient } from "./ui/HoverBorder";
 
 const Resume = () => {
   const quickLinks = [
@@ -8,74 +10,68 @@ const Resume = () => {
       name: "GitHub",
       icon: <FaGithub />,
       link: "https://github.com/kiyansh13karan",
-      color: "hover:text-gray-300"
+      color: "text-white",
     },
     {
       name: "LinkedIn",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/karan-nayal-054981286/",
-      color: "hover:text-blue-500"
+      color: "text-[#0A66C2]",
     },
     {
       name: "Email",
       icon: <FaEnvelope />,
       link: "mailto:karannayalkannu1982@gmail.com",
-      color: "hover:text-red-400"
-    }
+      color: "text-[#EA4335]",
+    },
   ];
 
   const highlights = [
-    "B.Tech CSE – Graphic Era Hill University, Bhimtal (CGPA: 7.5)",
+    "B.Tech CSE – Graphic Era Hill University, Bhimtal",
     "Campus Mantri at GeeksforGeeks (Jan 2026 – Jun 2026)",
-    "300+ DSA problems solved (LeetCode & GeeksforGeeks)"
+    "750+ DSA problems solved (LeetCode & GeeksforGeeks)",
   ];
 
   return (
     <div className="py-16" id="resume">
       <div className="flex flex-col items-center">
         {/* Resume Content */}
-        <div id="resume-content" className="flex flex-col items-center mt-[5px]">
-          {/* Resume Section Heading */}
-          <h1 className="heading mb-4">
-            <span className="text-purple">Resume</span>
-          </h1>
-          <p className="text-white-200 text-center mb-8 text-lg">
-            A quick overview of my background and experience
-          </p>
-
-          <p className="text-white-200 text-center max-w-3xl mb-12 text-base leading-relaxed">
-            Computer Science Engineering student with strong foundations in Web Development, Machine Learning, and problem solving. Passionate about building modern, responsive applications and solving real-world problems through technology.
-          </p>
-
+        <div
+          id="resume-content"
+          className="flex flex-col items-center mt-[5px]"
+        >
           {/* Resume Highlights */}
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-6 max-w-5xl mx-auto mb-12 px-4">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-6 max-w-5xl mx-auto mb-12 px-4 w-full">
             {highlights.map((highlight, index) => (
-              <div
+              <Button
                 key={index}
-                className="p-6 rounded-2xl backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 border border-black-300 hover:scale-105 transition-all duration-300 group"
+                duration={Math.floor(Math.random() * 5000) + 5000}
+                borderRadius="1.25rem"
+                containerClassName="h-full w-full hover:scale-105 transition-transform duration-300 group md:col-span-1"
+                className="flex-1 text-white border-none backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200"
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <p className="text-white-200 text-center relative z-10">
-                  • {highlight}
-                </p>
-              </div>
+                <div className="p-6 h-full flex flex-col justify-center items-center relative z-10 w-full">
+                  <div className="absolute inset-0 rounded-[1.25rem] bg-gradient-to-r from-purple/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <p className="text-white-200 text-center text-sm md:text-base font-semibold relative z-20">
+                    {highlight}
+                  </p>
+                </div>
+              </Button>
             ))}
           </div>
 
           {/* Quick Links */}
           <div className="flex gap-6 mb-12">
             {quickLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group w-14 h-14 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-xl border border-black-300 transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-purple/20 ${link.color}`}
-              >
-                <div className="text-2xl text-white-200 group-hover:scale-110 transition-all duration-300">
-                  {link.icon}
-                </div>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+              <a key={index} href={link.link} target="_blank" rel="noopener noreferrer">
+                <HoverBorderGradient
+                  containerClassName="w-16 h-16 hover:scale-110 transition-transform duration-300 group"
+                  className="w-full h-full flex justify-center items-center bg-black-200 p-0"
+                >
+                  <div className={`text-3xl ${link.color} group-hover:scale-110 transition-transform duration-300`}>
+                    {link.icon}
+                  </div>
+                </HoverBorderGradient>
               </a>
             ))}
           </div>
@@ -84,7 +80,7 @@ const Resume = () => {
           <a
             href="/Karan_Nayal_CV.pdf"
             download="Karan_Nayal_CV.pdf"
-            className="inline-block"
+            className="inline-block rounded-lg hover:scale-110 hover:shadow-2xl hover:shadow-purple/50 transition-all duration-300"
           >
             <MagicButton
               title="Download Resume"
