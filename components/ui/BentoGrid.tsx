@@ -414,7 +414,7 @@ export const BentoGridItem = ({
             <div
               className={`absolute -bottom-5 left-1/2 -translate-x-1/2 ${copied ? "block" : "hidden"}`}
             >
-              <Lottie options={defaultOptions} height={200} width={400} />
+              <Lottie options={defaultOptions} height={200} width={400} eventListeners={[]} />
             </div>
 
             <MagicButton
@@ -546,7 +546,7 @@ export const BentoGridItem = ({
                 }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie options={defaultOptions} height={200} width={400} eventListeners={[]} />
               </div>
 
               <MagicButton
