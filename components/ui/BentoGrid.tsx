@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 // Also install this npm i --save-dev @types/react-lottie
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
-const Spline = dynamic(() => import("./SplineWrapper"), { ssr: false });
+// Removed Spline due to client-side crash
 
 import {
   FaGithub,
@@ -121,7 +121,7 @@ export const BentoGridItem = ({
         {/* Spline Robot (Absolute full box behind text) */}
         <div className="absolute inset-0 z-0 pointer-events-auto opacity-40 mix-blend-lighten">
           <div className="absolute inset-0 scale-[1.3] md:scale-[1.4] translate-y-[15%] lg:translate-x-[10%]">
-            <Spline scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
+            {/* Spline removed due to client-side WebGL crash */}
           </div>
         </div>
 

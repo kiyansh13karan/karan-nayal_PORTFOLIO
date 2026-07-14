@@ -32,8 +32,7 @@ const OrbitIcon = ({ tech, index, total }: { tech: typeof orbitTechs[0]; index: 
     <motion.div
       className="absolute top-0 left-0 w-full h-full pointer-events-auto"
       style={{
-        originX: 0,
-        originY: 0,
+        transformOrigin: "0% 0%",
         willChange: "transform",
       }}
       initial={{ rotate: angle }}
