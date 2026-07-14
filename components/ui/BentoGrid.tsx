@@ -121,7 +121,13 @@ export const BentoGridItem = ({
         {/* Spline Robot (Absolute full box behind text) */}
         <div className="absolute inset-0 z-0 pointer-events-auto opacity-40 mix-blend-lighten">
           <div className="absolute inset-0 scale-[1.3] md:scale-[1.4] translate-y-[15%] lg:translate-x-[10%]">
-            {/* Spline removed due to client-side WebGL crash */}
+            <iframe 
+              src="https://my.spline.design/kZDDjO5HuC9GJUM2/" 
+              frameBorder="0" 
+              width="100%" 
+              height="100%"
+              style={{ pointerEvents: 'none' }}
+            ></iframe>
           </div>
         </div>
 
